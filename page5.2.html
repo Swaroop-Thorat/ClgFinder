@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Selection</title>
+    <link rel="icon" type="image/jpg" href="icon.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #background2 {
+            background-image: url("bck3.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #828080;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            height: 40px;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: end;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: rgb(153, 227, 227);
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: rgb(71, 215, 215);
+            font-weight: 900;
+            transform: scale(1.05);
+        }
+        .header {
+            margin-top: 40px;
+            width: 100%;
+            background-image: url('sc1.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+        }
+        .nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav marquee {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            justify-items: center;
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr 1fr 1fr;
+        }
+        .box {
+            background-color: #0d0e0e;
+            padding: auto;
+            border-radius: 28px;
+            box-shadow: 16px 18px 15px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            width: 90%;
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 25px;
+            border: 4px solid black;
+            max-width: 600px;
+            cursor: pointer;
+            opacity: 0.9;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;    
+            height: 75%;
+            border: 3px solid black;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .group {
+            color: #b0a9a9;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 50px;
+            text-shadow: 10px 9px 5px #020000;
+            display: block;
+            margin-top: 10px;
+            font-weight: bolder;
+        }
+        .bottom-section {
+            background: #b79993;
+            padding: 20px;
+            text-align:center;
+            border: 2px solid black;
+        }
+        #txt {
+            text-align: justify;
+            font-size: 20px;
+            margin: 10px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        .txtIn {
+            line-height: 1.5;
+            text-align:justify;
+        }
+        @media (max-width: 600px) {
+            .main-container{
+                grid-template-columns:1fr;
+                max-width: 500px;
+            }
+            .top-nav {
+                width: 100%;
+                justify-content: right;
+                height: auto;
+                padding: 10px;
+            }
+            button {
+                margin-bottom: 5px;
+            }
+            .header {
+                height: 150px;
+            }
+            .group {
+                font-size: 27px;
+                text-shadow:0 0 0 #020000;
+                margin-top: 20px;
+                font-weight: bolder;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="page3.html"><button>Home</button></a>
+        <button onclick="alertNav()">About Us</button>
+    </div>
+    <div class="header"></div>
+    <div class="nav">
+        <marquee direction="left">Explore, Compare, Enroll - The Smart Way</marquee>
+    </div>
+    <div id="background2">
+        <div class="main-container">
+     
+
+           
+            <div class="box" onclick="loadAB()" title="A.B.SMIDS, Mangolore">
+                <span class="group">A.B. Shetty Memorial Institute of Dental Science, Mangolore</span>
+            </div>
+            <div class="box" onclick="loadMCDS()" title="MCDS, Manipal">
+                <span class="group">Manipal College of Dental Science, Manipal</span>
+            </div> 
+            <div class="box" onclick="loadSaveetha()" title="SIMTS, Chennai">
+                <span class="group">Saveetha Institute of Medical and Technical Science, Chennai</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="bottom-section">
+        <p id="txt">INFO:</p>
+    
+        <span class="txtIn">***********
+            <p>When considering the top private colleges for a Bachelor of Dental Surgery (BDS) in India, it's essential to evaluate factors like:</p>
+
+            <p><strong>Infrastructure:</strong> Well-equipped dental clinics and laboratories.</p>
+            <p><strong>Faculty Expertise:</strong> Experienced dental professionals and educators.</p>
+            <p><strong>Clinical Exposure:</strong> Opportunities for hands-on experience and patient interaction.</p>
+            <p><strong>Reputation:</strong> The institution's standing within the dental community.</p>
+            
+            <p>Here are 3 prominent private institutions known for their BDS programs:</p>
+            
+            <p><strong>Manipal College of Dental Sciences, Manipal:</strong></p>
+            <p>This college is highly regarded for its excellent infrastructure, experienced faculty, and strong clinical exposure.</p>
+            <p>It is part of the Manipal Academy of Higher Education, a well-respected institution.</p>
+            <p>They have a very strong reputation within the dental community.</p>
+            
+            <p><strong>A.B. Shetty Memorial Institute of Dental Sciences, Mangalore:</strong></p>
+            <p>This institute is known for its focus on providing quality dental education and clinical training.</p>
+            <p>It has a good reputation for its well-equipped clinics and laboratories.</p>
+            <p>It is known for producing very skilled dental professionals.</p>
+            
+            <p><strong>Saveetha Institute of Medical and Technical Sciences, Chennai:</strong></p>
+            <p>Saveetha Dental College is known for its modern facilities and innovative teaching methods.</p>
+            <p>They have a very high focus on modern dental techniques.</p>
+            <p>They have very good infrastructure.</p>
+            
+            <p><strong>Key Considerations:</strong></p>
+            <p><strong>Clinical Exposure:</strong> Hands-on experience is crucial in dental education.</p>
+            <p><strong>Infrastructure:</strong> Modern dental clinics and laboratories are essential.</p>
+            <p><strong>Faculty:</strong> Experienced and knowledgeable faculty members are vital.</p>
+            
+            <p>It is important to note that the quality of dental education can vary, and it's advisable to research individual colleges thoroughly.</p>
+***********</span>
+    </div>
+</div>
+    <script>
+        function alertNav() {
+            alert(`Thank you for visiting! I am pursuing a degree in Artificial Intelligence and Data Science at Parul Institute of Engineering and Technology, Parul University, and have completed a Frontend Development Global Certification. This frontend project is a step in my learning journey. Your feedback would mean a lot! Connect with me at "xhuman18@gmail.com." `);
+            alert(`Disclaimer: This website is a collection of top-ranked private institutes in India for various fields of study. The information is sourced from AI tools (@ChatGPT, @Gemini, @Copilot) and is not intended to hurt anyone’s sentiments.`);
+        }
+        function loadMCDS() {
+            location.assign('https://smu.edu.in/campus/mcoms.html');
+        }
+        function loadAB() {
+            location.assign('https://www.absmids.nitte.edu.in/');
+        }
+        function loadSaveetha() {
+            location.assign('https://saveethadental.com/');
+        }
+    </script>
+</body>
+</html>

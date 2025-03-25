@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Selection</title>
+    <link rel="icon" type="image/jpg" href="icon.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #background2 {
+            background-image: url("bck3.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #828080;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            height: 40px;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: end;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: rgb(153, 227, 227);
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: rgb(71, 215, 215);
+            font-weight: 900;
+            transform: scale(1.05);
+        }
+        .header {
+            margin-top: 40px;
+            width: 100%;
+            background-image: url('sc1.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+        }
+        .nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav marquee {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            justify-items: center;
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr 1fr 1fr;
+        }
+        .box {
+            background-color: #0d0e0e;
+            padding: auto;
+            border-radius: 28px;
+            box-shadow: 16px 18px 15px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            width: 90%;
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 25px;
+            border: 4px solid black;
+            max-width: 600px;
+            cursor: pointer;
+            opacity: 0.9;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;    
+            height: 75%;
+            border: 3px solid black;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .group {
+            color: #b0a9a9;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 50px;
+            text-shadow: 10px 9px 5px #020000;
+            display: block;
+            margin-top: 10px;
+            font-weight: bolder;
+        }
+        .bottom-section {
+            background: #b79993;
+            padding: 20px;
+            text-align:center;
+            border: 2px solid black;
+        }
+        #txt {
+            text-align: justify;
+            font-size: 20px;
+            margin: 10px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        .txtIn {
+            line-height: 1.5;
+            text-align:justify;
+        }
+        @media (max-width: 600px) {
+            .main-container{
+                grid-template-columns:1fr;
+                max-width: 500px;
+            }
+            .top-nav {
+                width: 100%;
+                justify-content: right;
+                height: auto;
+                padding: 10px;
+            }
+            button {
+                margin-bottom: 5px;
+            }
+            .header {
+                height: 150px;
+            }
+            .group {
+                font-size: 27px;
+                text-shadow:0 0 0 #020000;
+                margin-top: 20px;
+                font-weight: bolder;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="page3.html"><button>Home</button></a>
+        <button onclick="alertNav()">About Us</button>
+    </div>
+    <div class="header"></div>
+    <div class="nav">
+        <marquee direction="left">Explore, Compare, Enroll - The Smart Way</marquee>
+    </div>
+    <div id="background2">
+        <div class="main-container">
+     
+
+           
+            <div class="box" onclick="loadBITS()" title="BITS,Pilani">
+                <span class="group">Birla Institute of Technology and Science, Pilani</span>
+            </div>
+            <div class="box" onclick="loadVIT()" title="VIT,Vellore">
+                <span class="group">Vellore Institute of Technology, Vellore</span>
+            </div> 
+            <div class="box" onclick="loadSRM()" title="SRMIST, Chennai">
+                <span class="group">SRM Institute of Science and Technology,Chennai</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="bottom-section">
+        <p id="txt">INFO:</p>
+    
+        <span class="txtIn">***********
+            <p>When considering the top private colleges in India for Electrical Engineering, it's essential to evaluate factors like:</p>
+
+            <p><strong>Faculty Expertise:</strong> The quality of teaching and research.</p>
+            <p><strong>Infrastructure:</strong> Laboratory facilities and research opportunities.</p>
+            <p><strong>Industry Connections:</strong> Collaborations with companies for internships and placements.</p>
+            <p><strong>Placement Records:</strong> The success of graduates in securing good jobs.</p>
+            
+            <p>Here are three prominent private institutions known for their Electrical Engineering programs:</p>
+            
+            <p><strong>Birla Institute of Technology and Science (BITS) Pilani:</strong></p>
+            <p>BITS Pilani is renowned for its rigorous academic curriculum and high standards.</p>
+            <p>The Electrical Engineering department has a strong focus on research and innovation.</p>
+            <p>BITS Pilani graduates are highly sought after by leading technology companies.</p>
+            <p>It has very strong placement records.</p>
+            
+            <p><strong>Vellore Institute of Technology (VIT) Vellore:</strong></p>
+            <p>VIT Vellore has a very strong Electrical Engineering department, with a wide range of specializations.</p>
+            <p>They have excellent placement records, with many students being recruited by top electrical and electronics companies.</p>
+            <p>The institution provides well-equipped laboratories and research facilities.</p>
+            <p>Very large student body, meaning many opportunities.</p>
+            
+            <p><strong>SRM Institute of Science and Technology, Chennai:</strong></p>
+            <p>SRM University has a rapidly growing Electrical Engineering department, with a focus on industry relevance.</p>
+            <p>They have established strong connections with electrical and electronics companies.</p>
+            <p>The university provides good infrastructure and placement opportunities.</p>
+            
+            <p><strong>Key Considerations:</strong></p>
+            <p>When looking at these colleges, it's important to check the specific curriculum and specializations offered within the Electrical Engineering department.</p>
+            <p>Placement records can vary from year to year, so it's advisable to look at recent placement data.</p>
+            <p>Fees and hostel facilities can also vary, so it's essential to check the college websites for the latest information.</p>
+***********</span>
+    </div>
+</div>
+    <script>
+        function alertNav() {
+            alert(`Thank you for visiting! I am pursuing a degree in Artificial Intelligence and Data Science at Parul Institute of Engineering and Technology, Parul University, and have completed a Frontend Development Global Certification. This frontend project is a step in my learning journey. Your feedback would mean a lot! Connect with me at "xhuman18@gmail.com." `);
+            alert(`Disclaimer: This website is a collection of top-ranked private institutes in India for various fields of study. The information is sourced from AI tools (@ChatGPT, @Gemini, @Copilot) and is not intended to hurt anyone’s sentiments.`);
+        }
+        function loadBITS() {
+            location.assign('https://www.bits-pilani.ac.in/');
+        }
+        function loadVIT() {
+            location.assign('https://vit.ac.in/');
+        }
+        function loadSRM() {
+            location.assign('https://www.srmist.edu.in/');
+        }
+    </script>
+</body>
+</html>

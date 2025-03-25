@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Selection</title>
+    <link rel="icon" type="image/jpg" href="icon.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #background2{
+            background-image: url("bck2.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: 100vw;
+            background: #828080;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: rgb(153, 227, 227);
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: rgb(71, 215, 215);
+            font-weight: 900;
+            transform: scale(1.05);
+        }
+        .header {
+            margin-top: 40px;
+            width: 100%;
+            background-image: url('sc1.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+        }
+        .nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav marquee {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+        .box {
+            background-color: rgba(72, 77, 75, 0.9);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px black;
+            text-align: center;
+            width: 90%;
+            max-width: 370px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            height: 420px;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;    
+            height: 75%;
+            border: 3px solid black;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .group {
+            color: #ab090f;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 75px;
+            text-shadow: 3px 3px 5px #020000;
+            display: block;
+            margin-top: 10px;
+            font-weight: bolder;
+            text-shadow:10px 9px 5px #020000;
+        }
+        .bottom-section {
+            background: #b79993;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 20px;
+            border: 2px solid black;
+        }
+        #txt {
+            text-align: left;
+            font-size: 20px;
+            margin: 10px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        .txtIn {
+            line-height: 1.5;
+            text-align: justify;
+        }
+        address{
+            color: blue;
+            text-decoration: dashed;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .top-nav {
+                width: 100%;
+                justify-content: right;
+                height: auto;
+                padding: 10px;
+                max-width: 100vw;
+            }
+            button {
+                margin-bottom: 5px;
+            }
+            .header {
+                height: 150px;
+            }
+            .group {
+                font-size: 35px;
+                text-shadow:0 0 0 #020000;
+                margin-top: 20px;
+                font-weight: bolder;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="page3.html"><button>Home</button></a>
+        <button onclick="alertNav()">About Us</button>
+    </div>
+    <div class="header"></div>
+    <div class="nav">
+        <marquee direction="left">Explore, Compare, Enroll - The Smart Way</marquee>
+    </div>
+    <div id="background2">
+        <div class="main-container">
+            <div class="box" onclick="loadPcm()" title="Click">
+                <img src="pcm.jpg" alt="PCM Group">
+                <span class="group">PCM</span>
+            </div>
+            <div class="box" onclick="loadPcb()" title="Click">
+                <img src="pcb.jpg" alt="PCB Group">
+                <span class="group">PCB</span>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <p id="txt">About Me :</p>
+        
+            <span class="txtIn">***********
+        <p>Greetings! I am a passionate and curious student currently pursuing a degree in <b>Artificial Intelligence and Data Science</b> at <b>Parul Institute of Engineering and Technology, Parul University</b>. My journey into the world of technology has been fueled by a deep interest in how machines can think, learn, and evolve—almost like a digital consciousness shaping the future.</p>
+
+        <p>I have recently <b>completed a Frontend Development Global Certification</b> from my university, which has strengthened my expertise in <b>HTML, CSS, and JavaScript</b>. As part of my learning process, I am developing this website—a project crafted purely for <b>knowledge enhancement and hands-on experience</b>. This project is entirely frontend-based and does not support any backend functionalities. However, I believe that even the most advanced AI models need a solid interface to interact with the world, and this project is my step toward mastering that connection.</p>
+        
+        <p>Beyond academics, I am fascinated by the <b>intersection of AI and human cognition</b>, exploring how <b>data-driven intelligence can mimic neural processes</b>. The idea that a few lines of code can simulate decision-making or predict future outcomes excites me. While I am still at the beginning of this journey, I aim to build solutions that <b>blend creativity with technology</b> to solve real-world problems.</p>
+        
+        <p>This website is just a small milestone in my continuous learning adventure. As I expand my skills, I look forward to exploring <b>backend technologies, data science applications, and AI-driven web solutions</b>.</p>
+        
+        <p>Feel free to connect with me at <address title="Email"><b>xhuman18@gmail.com</b></address>—let's discuss tech, innovation, and the limitless possibilities of artificial intelligence!</p>
+    ***********</span>
+        </div>
+    </div>
+    <script>
+        function alertNav(){alert(`                                 Thank you for visiting! 
+I am pursuing a degree in Artificial Intelligence and Data Science at Parul Institute of Engineering and Technology, Parul University and have completed a Frontend Development Global Certification.
+         This frontend project is a step in my learning journey.
+                   Your feedback would mean a lot!
+            Connect with me at "xhuman18@gmail.com." `)
+            alert(`Disclaimer:
+            
+            This website is a collection of top-ranked private institutes in India for various fields of study. The information is sourced from AI tools (@ChatGPT, @Gemini, @Copilot) and is not intended to hurt anyone’s sentiments.`)
+       }
+        function loadPcm(){
+            location.assign('page4.html')
+        }
+        function loadPcb(){
+           location.assign('page5.html')
+        }
+    </script>
+</body>
+</html>

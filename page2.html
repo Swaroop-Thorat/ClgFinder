@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="icon" type="image/jpg" href="icon.jpg">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-image: url('sc1.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            position: static;
+        }
+        .nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav marquee {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .quote {
+            background:#b2f4f1;
+            padding: 20px;
+            border-radius: 28px;
+            box-shadow: 16px 18px 15px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            width: 90%;
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 25px;
+            opacity: 0.8;
+            border: 4px solid black;
+            max-width: 600px;
+        }
+        .login-container {
+            background-color: rgba(72, 77, 75, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 16px 16px 10px black;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            margin-top: auto;
+            margin-bottom: auto;
+            border: 3px rgba(53, 57, 55, 1);
+        }
+        .login-container form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            display: block;
+            width: 90%;
+            max-width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 3px solid black;
+            border-radius: 50px;
+        }
+        button {
+            background: rgb(80, 197, 236);
+            color: black;
+            padding: 10px;
+            border: 3px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+            display: block;
+            width: 45%;
+        }
+        button:hover {
+            background: rgb(15, 150, 247);
+        }
+        #script1{
+            color: crimson;
+            font-weight: 100;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+        }
+        #background1{
+            background-image: url("bck1.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        h1{
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(219, 219, 219);
+        }
+        @media (max-width: 600px) {
+            .header {
+                height: 150px;
+            }
+            .container {
+                height: auto;
+                padding-top: 15px;
+                
+            }
+            .quote{
+                margin-bottom: 25px;
+            }
+            .login-container{
+                margin-bottom: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="script1"></div>
+    <div class="header"></div>
+    <div class="nav">
+        <marquee direction="left" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Explore, Compare, Enroll - The Smart Way</marquee>
+    </div>
+    <div id="background1" >
+        <div class="container">
+            
+            <div class="quote">
+                <blockquote>
+                    <q>Before you start some work, always ask yourself three questions—Why am I doing it? What the results might be? Will I be successful? Only when you think deeply and find satisfactory answers, go ahead.</q>
+                </blockquote>
+                <cite>- Chanakya</cite>
+            </div>
+            <div class="login-container">
+                <form>
+                    <h1>Register</h1>
+                    <input type="text" placeholder="Username" required id="user">
+                    <input type="password" placeholder="Password" required id="pass"><br>
+                    <button onclick="submit" id="accept"><strong>Signup</strong></button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>alert(`Please enter your credentials carefully. Ensure that the same details are used on the login page to continue accessing the site.
+
+        (NOTE: Username and Password are Case Sensitive)`);
+        
+        function goToLogin(event) {
+            event.preventDefault();
+        
+            let username = document.getElementById("user").value.trim();
+            let password = document.getElementById("pass").value.trim();
+        
+            if (username === "" || password === "") {
+                alert("Please enter both a username and password.");
+                return;
+            }
+        
+            localStorage.setItem("username", username);
+            localStorage.setItem("passward", password);
+            localStorage.setItem("alertsShown", "true");
+        
+            alert("Signup successful! Redirecting to login page...");
+            location.assign("index.html");
+        }
+        
+        document.getElementById("accept").addEventListener("click", goToLogin);
+        
+    </script>
+</body>
+</html>

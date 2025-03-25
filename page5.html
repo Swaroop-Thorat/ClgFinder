@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Selection</title>
+    <link rel="icon" type="image/jpg" href="icon.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #background2 {
+            background-image: url("bck2.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #828080;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            height: 40px;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: end;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: rgb(153, 227, 227);
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: rgb(71, 215, 215);
+            font-weight: 900;
+            transform: scale(1.05);
+        }
+        .header {
+            margin-top: 40px;
+            width: 100%;
+            background-image: url('sc1.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+        }
+        .nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav marquee {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            justify-items: center;
+            grid-template-columns:1fr 1fr 1fr;
+            grid-template-rows:1fr 1fr 1fr;
+        }
+        .box {
+            
+            background-color: rgba(72, 77, 75, 0.9);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px black;
+            text-align: center;
+            width: 90%;
+            max-width: 370px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            height: 420px;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;    
+            height: 75%;
+            border: 3px solid black;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .group {
+            color: #ab090f;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 70px;
+            text-shadow: 10px 9px 5px #020000;
+            display: block;
+            margin-top: 10px;
+            font-weight: bolder;
+        }
+        .bottom-section {
+            background: #b79993;
+            padding: 20px;
+            text-align:center;
+            border: 2px solid black;
+        }
+        #txt {
+            text-align: justify;
+            font-size: 20px;
+            margin: 10px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        .txtIn {
+            line-height: 1.5;
+            text-align:justify;
+        }
+        @media (max-width: 600px) {
+            .main-container{
+                grid-template-columns:1fr;
+            }
+            .top-nav {
+                width: 100%;
+                justify-content: right;
+                height: auto;
+                padding: 10px;
+            }
+            button {
+                margin-bottom: 5px;
+            }
+            .header {
+                height: 150px;
+            }
+            .group {
+                font-size: 35px;
+                text-shadow:0 0 0 #020000;
+                margin-top: 20px;
+                font-weight: bolder;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="page3.html"><button>Home</button></a>
+        <button onclick="alertNav()">About Us</button>
+    </div>
+    <div class="header"></div>
+    <div class="nav">
+        <marquee direction="left">Explore, Compare, Enroll - The Smart Way</marquee>
+    </div>
+    <div id="background2">
+        <div class="main-container">
+     
+
+           
+            <div class="box" onclick="loadMBBS()" title="Bachelor of Medical and Bachelor of Surgery ">
+                <img src="mbbs.jpeg" alt="MBBS">
+                <span class="group">MBBS</span>
+            </div>
+            <div class="box" onclick="loadBDS()" title="Bachelor of Dental Surgery">
+                <img src="dental.jpeg" alt="BDS">
+                <span class="group">BDS</span>
+            </div> 
+            <div class="box" onclick="loadBPh()" title="Bachelor of Pharmacy">
+                <img src="Bpharm.webp" alt="B.Pharm">
+                <span class="group">B.Pharm</span>
+            </div>
+           
+
+            
+                <div class="box" onclick="loadBNu()" title="Bsc Nursing">
+                    <img src="nursing.jpeg" alt="Bsc Nursing">
+                    <span class="group">Nursing</span>
+                </div>
+                <div class="box" onclick="loadBio()" title="Biotechnology">
+                    <img src="biotech.jpg" alt="Biotechnology">
+                    <span class="group">Biotech</span>
+                </div> 
+                <div class="box" onclick="loadBAMS()" title="Bachelor of Ayurvedic Medicine and Surgery">
+                    <img src="bams.jpeg" alt="BAMS">
+                    <span class="group">BAMS</span>
+                </div>
+                
+
+                
+                    <div class="box" onclick="loadBHMS()" title="Bachelor of Homeopathic Medicine and Surgery">
+                        <img src="bhms.jpg" alt="BHMS">
+                        <span class="group">BHMS</span>
+                    </div>
+                    <div class="box" onclick="loadBSpe()" title="Bsc in Specialized Fields(Microbiology, Biochemistry, Genetics, Physiology, etc)">
+                        <img src="specialize.jpg" alt="B.Arch">
+                        <span class="group">BSC</span>
+                    </div> 
+                    <div class="box" onclick="loadAllied()" title="Allied Health Sciences(Physiotherapy, Occupational Therapy, Medical Lab Technology, Radiology, etc)">
+                        <img src="allied.jpg" alt="Allied Health Sciences">
+                        <span class="group">A.H.S</span>
+                    </div>
+                    
+
+
+        </div>
+    </div>
+
+
+    <div class="bottom-section">
+        <p id="txt">INFO:</p>
+    
+        <span class="txtIn">***********
+            <p>When looking at career paths after completing 12th grade with a PCB (Physics, Chemistry, Biology) subject combination, the focus naturally shifts towards medical and life sciences. Here are 6 prominent streams, keeping in mind average packages, market relevance, and future scope:</p>
+
+<p><b>Top 9 Streams After PCB:</b></p>
+
+<ul>
+    <li><b>MBBS (Bachelor of Medicine and Bachelor of Surgery):</b>
+        <ul>
+            <li>The premier medical degree, leading to a physician career.</li>
+            <li>Highest earning potential and societal prestige.</li>
+            <li>Evergreen demand.</li>
+        </ul>
+    </li>
+    <li><b>BDS (Bachelor of Dental Surgery):</b>
+        <ul>
+            <li>Specialized in dental health, leading to a dentist career.</li>
+            <li>Stable income and growing demand for oral care.</li>
+        </ul>
+    </li>
+    <li><b>B.Pharm (Bachelor of Pharmacy):</b>
+        <ul>
+            <li>Focuses on pharmaceuticals, drug development, and dispensing.</li>
+            <li>Growing industry with research and development opportunities.</li>
+        </ul>
+    </li>
+    <li><b>BSc Nursing:</b>
+        <ul>
+            <li>Essential for patient care, with high demand in hospitals and clinics.</li>
+            <li>Good job security and opportunities for specialization.</li>
+        </ul>
+    </li>
+    <li><b>Biotechnology:</b>
+        <ul>
+            <li>Combines biology with technology, offering diverse career paths in research and industry.</li>
+            <li>Rapidly evolving field with strong future potential.</li>
+        </ul>
+    </li>
+    <li><b>BAMS (Bachelor of Ayurvedic Medicine and Surgery):</b>
+        <ul>
+            <li>Traditional Indian medicine, gaining popularity globally.</li>
+            <li>Growing interest in alternative medicine.</li>
+        </ul>
+    </li>
+    <li><b>BHMS (Bachelor of Homeopathic Medicine and Surgery):</b>
+        <ul>
+            <li>Another form of alternative medicine, with a dedicated patient base.</li>
+            <li>Offers opportunities in private practice and research.</li>
+        </ul>
+    </li>
+    <li><b>BSc in Specialized Fields (Microbiology, Biochemistry, Genetics, Physiology, etc.):</b>
+        <ul>
+            <li>Provides a strong foundation for research, academia, and specialized industries.</li>
+            <li>Allows for deep dives into specific areas of life sciences.</li>
+        </ul>
+    </li>
+    <li><b>Allied Health Sciences (e.g., Physiotherapy, Occupational Therapy, Medical Lab Technology, Radiology):</b>
+        <ul>
+            <li>These fields are very important to the healthcare system, and provide a strong career path.</li>
+            <li>Growing demand for these professionals.</li>
+            <li>These fields provide an important support structure within the medical field.</li>
+        </ul>
+    </li>
+</ul>
+
+<p><b>Key Observations:</b></p>
+
+<ul>
+    <li>The first few spots are firmly occupied by core medical degrees due to their high demand and earning potential.</li>
+    <li>Alternative medicine streams like BAMS and BHMS are gaining traction.</li>
+    <li>BSc specializations offer a strong foundation for those interested in research and specialized fields.</li>
+    <li>Allied health science fields are also rising in demand, and are very important to the healthcare system.</li>
+</ul>
+***********</span>
+    </div>
+</div>
+    <script>
+        function alertNav() {
+            alert(`Thank you for visiting! I am pursuing a degree in Artificial Intelligence and Data Science at Parul Institute of Engineering and Technology, Parul University, and have completed a Frontend Development Global Certification. This frontend project is a step in my learning journey. Your feedback would mean a lot! Connect with me at "xhuman18@gmail.com." `);
+            alert(`Disclaimer: This website is a collection of top-ranked private institutes in India for various fields of study. The information is sourced from AI tools (@ChatGPT, @Gemini, @Copilot) and is not intended to hurt anyone’s sentiments.`);
+        }
+        function loadMBBS() {
+            location.assign('page5.1.html');
+        }
+        function loadBDS() {
+            location.assign('page5.2.html');
+        }
+        function loadBPh() {
+            location.assign('page5.3.html');
+        }
+        function loadBNu() {
+            location.assign('page5.4.html');
+        }
+        function loadBio() {
+            location.assign('page5.5.html');
+        }
+        function loadBAMS() {
+            location.assign('page5.6.html');
+        }
+        function loadBHMS() {
+            location.assign('page5.7.html');
+        }
+        function loadBSpe() {
+            location.assign('page5.8.html');
+        }
+        function loadAllied() {
+            location.assign('page5.9.html');
+        }
+
+    </script>
+</body>
+</html>

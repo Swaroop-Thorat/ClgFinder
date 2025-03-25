@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Selection</title>
+    <link rel="icon" type="image/jpg" href="icon.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #background2 {
+            background-image: url("bck3.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #828080;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            height: 40px;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: end;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: rgb(153, 227, 227);
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: rgb(71, 215, 215);
+            font-weight: 900;
+            transform: scale(1.05);
+        }
+        .header {
+            margin-top: 40px;
+            width: 100%;
+            background-image: url('sc1.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+        }
+        .nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav marquee {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            justify-items: center;
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr 1fr 1fr;
+        }
+        .box {
+            background-color: #0d0e0e;
+            padding: auto;
+            border-radius: 28px;
+            box-shadow: 16px 18px 15px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            width: 90%;
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 25px;
+            border: 4px solid black;
+            max-width: 600px;
+            cursor: pointer;
+            opacity: 0.9;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;    
+            height: 75%;
+            border: 3px solid black;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .group {
+            color: #b0a9a9;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 50px;
+            text-shadow: 10px 9px 5px #020000;
+            display: block;
+            margin-top: 10px;
+            font-weight: bolder;
+        }
+        .bottom-section {
+            background: #b79993;
+            padding: 20px;
+            text-align:center;
+            border: 2px solid black;
+        }
+        #txt {
+            text-align: justify;
+            font-size: 20px;
+            margin: 10px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        .txtIn {
+            line-height: 1.5;
+            text-align:justify;
+        }
+        @media (max-width: 600px) {
+            .main-container{
+                grid-template-columns:1fr;
+                max-width: 500px;
+            }
+            .top-nav {
+                width: 100%;
+                justify-content: right;
+                height: auto;
+                padding: 10px;
+            }
+            button {
+                margin-bottom: 5px;
+            }
+            .header {
+                height: 150px;
+            }
+            .group {
+                font-size: 27px;
+                text-shadow:0 0 0 #020000;
+                margin-top: 20px;
+                font-weight: bolder;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="page3.html"><button>Home</button></a>
+        <button onclick="alertNav()">About Us</button>
+    </div>
+    <div class="header"></div>
+    <div class="nav">
+        <marquee direction="left">Explore, Compare, Enroll - The Smart Way</marquee>
+    </div>
+    <div id="background2">
+        <div class="main-container">
+     
+
+           
+            <div class="box" onclick="loadBIT()" title="BIT, Mesra">
+                <span class="group">Birla Institute of Technology, Mesra</span>
+            </div>
+            <div class="box" onclick="loadMCP()" title="MCPS, Manipal">
+                <span class="group">Manipal College of pharmaceutical Science, Manipal</span>
+            </div> 
+            <div class="box" onclick="loadJSS()" title="JSSCP, Ooty">
+                <span class="group">JSS College of Pharmacy, Ooty</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="bottom-section">
+        <p id="txt">INFO:</p>
+    
+        <span class="txtIn">***********
+            <p>When considering the top private colleges for Bachelor of Pharmacy (B.Pharm) in India, it's essential to look at factors like:</p>
+
+            <p><strong>Infrastructure:</strong> Well-equipped laboratories and research facilities.</p>
+            <p><strong>Faculty Expertise:</strong> Experienced faculty members with research and industry experience.</p>
+            <p><strong>Industry Connections:</strong> Collaborations with pharmaceutical companies and research organizations.</p>
+            <p><strong>Placement Records:</strong> The success of graduates in securing jobs in the pharmaceutical industry.</p>
+            
+            <p>Here are 3 prominent private institutions known for their B.Pharm programs:</p>
+            
+            <p><strong>Manipal College of Pharmaceutical Sciences, Manipal:</strong></p>
+            <p>This college is highly regarded for its excellent infrastructure, experienced faculty, and strong research focus.</p>
+            <p>It is part of the Manipal Academy of Higher Education, a well-respected institution.</p>
+            <p>They have very strong industry connections.</p>
+            
+            <p><strong>Birla Institute of Technology (BIT), Mesra:</strong></p>
+            <p>BIT Mesra has a well-established Pharmacy department with a focus on research and innovation.</p>
+            <p>They have well-equipped laboratories and research facilities.</p>
+            <p>They have a good track record of placements in the pharmaceutical industry.</p>
+            
+            <p><strong>JSS College of Pharmacy, Ooty:</strong></p>
+            <p>JSS College of Pharmacy, Ooty, is known for its strong academic curriculum and focus on practical training.</p>
+            <p>They have good infrastructure, and a strong focus on the pharmaceutical sciences.</p>
+            <p>They have strong connections to the pharmaceutical industry.</p>
+            
+            <p><strong>Key Considerations:</strong></p>
+            <p><strong>Laboratory Facilities:</strong> Modern laboratories for pharmaceutical analysis and research are crucial.</p>
+            <p><strong>Industry Exposure:</strong> Internships and collaborations with pharmaceutical companies are vital.</p>
+            <p><strong>Faculty Expertise:</strong> Experienced faculty members with research and industry experience are essential.</p>
+***********</span>
+    </div>
+</div>
+    <script>
+        function alertNav() {
+            alert(`Thank you for visiting! I am pursuing a degree in Artificial Intelligence and Data Science at Parul Institute of Engineering and Technology, Parul University, and have completed a Frontend Development Global Certification. This frontend project is a step in my learning journey. Your feedback would mean a lot! Connect with me at "xhuman18@gmail.com." `);
+            alert(`Disclaimer: This website is a collection of top-ranked private institutes in India for various fields of study. The information is sourced from AI tools (@ChatGPT, @Gemini, @Copilot) and is not intended to hurt anyone’s sentiments.`);
+        }
+        function loadMCP() {
+            location.assign('https://www.manipal.edu/mcops-manipal.html');
+        }
+        function loadBIT() {
+            location.assign('https://www.bitmesra.ac.in/1');
+        }
+        function loadJSS() {
+            location.assign('https://jssuni.edu.in/jssaher/college-of-pharmacy-ooty/cpo-home.html');
+        }
+    </script>
+</body>
+</html>
